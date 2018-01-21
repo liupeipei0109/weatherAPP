@@ -1,0 +1,402 @@
+/*
+* @Author: qing
+* @Date:   2018-01-17 14:34:17,7e
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-01-21 12:02:01
+*/
+/* 100px=1rem */
+/* *清除浏览器样式 */
+*{
+	margin: 0;
+	padding:0;
+}
+body{
+	background: #f5f5f5;
+}
+.screen{
+	width: 100%;
+	height: 13.77rem;
+	/* background: red; */
+	/* 上边是渐变色，下边是图片（通过left、bottom定位，）no-repeat不重复 */
+	background: url(../img/screen.png) no-repeat left bottom,-webkit-linear-gradient(top,#3bbdff,#47e9ff);
+    /* contain包含图片的全部 */
+    background-size: contain;
+}
+.header{
+	width: 100%;
+	height: 1.58rem;
+	/* background: red;  */
+	/* 字体大小 */
+	font-size: 0.6rem;
+	color: #fff;
+	/* 字体加粗 */
+	font-weight: bold; 
+	/* 文本属性 */
+	/* 文字水平居中 */
+	text-align: center;
+	/* 文字垂直居中 */
+	line-height: 1.58rem;
+}
+.screen .box{
+	width: 2.1rem;
+	height: 1.26rem;
+	/* background: #f1ab62; */
+	background: rgb(241,171,98);
+	border-radius: 0.18rem;
+	margin-top: 0.16rem;
+	margin-left: 0.27rem;
+	padding-top: 0.11rem;
+	/* 加padding后盒子变大 box-sizing: border-box解决 自定义盒模型*/
+	box-sizing: border-box;
+}
+.screen .box h2{
+	font-size: 0.3rem;
+	color: #fff;
+	text-align: center;
+}
+.screen .box h3{
+	font-size: 0.36rem;
+	color: #fff;
+	text-align: center;
+}
+.screen .du{
+	width: 100%;
+	height: 1.3rem;
+	/* 不要直接将文字与盒子设置成一样的大小，那样字会比盒子大 */
+	/* background: pink; */
+	font-size: 1.30rem;
+	color: #fff;
+	text-align: center;
+	margin-top: 0.51rem;
+	/* 左填充 */
+	/* padding-left: 4.96rem;
+    自定义盒模型
+	box-sizing: border-box; */
+	text-align: center;
+}
+.screen .tianqi{
+	width: 100%;
+	height: 0.57rem;
+	/* background: pink; */
+	font-size: 0.58rem;
+	color: #fff;
+	text-align: center;
+	margin-top: 0.47rem;
+	/* 可以取晴上下的空白像素，然后晴就居中对齐 */
+}
+.screen .shidu{
+	width: 100%;
+	height: 0.7rem;
+	font-size: 0.36rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.7rem;
+	margin-top: 0.17rem;
+}
+.screen .thing{
+	width: 100%;
+	height: 0.4rem;
+	/* background: red; */
+	font-size: 0.4rem;
+	color: #fff;
+	text-align: center;
+	line-height: ;
+	margin-top: 1.31rem;
+}
+/* box-sizing  盒子边框连在内（管盒子和边框） */
+.con1{
+	width: 100%;
+	height: 2.94rem;
+	background: #fff;
+	/* 粗细、实虚、空格 */
+	border-bottom: 0.03rem solid #e4e4e4;
+	padding-top: 0.72rem;
+	padding-left: 0.58rem;
+	box-sizing: border-box;
+}
+.content{
+	width: 4.85rem;
+	height: 1.47rem;
+	/* background: pink;  */	
+	border-right: 0.03rem solid #e4e4e4;
+    padding-right: 0.59rem;
+    box-sizing: border-box;
+    float:left;
+}
+.con1 .content:nth-child(2){
+	padding-right: 0;
+	border-right: 0px solid;
+	/* border-right: none; */
+	padding-left: 0.59rem;
+	box-sizing: border-box;
+}
+.content .top{
+	width: 100%;
+	height: 0.59rem;
+	/* background: yellowgreen; */
+	/* 指定为弹性布局 可以快速搭建页面 */
+	display: flex;
+	/* 两端对齐 */
+	justify-content: space-between;
+}
+.content .top .day {
+	font-size: 0.38rem;
+	color: #434343;
+	line-height: 0.59rem;
+}
+.content .top .temperature{
+	font-size: 0.3rem;
+	color: #434343;
+	line-height: 0.59rem;
+}
+.content .bottom{
+	width: 100%;
+	height: 0.86rem;
+	/* background: yellow; */
+	display: flex;
+	justify-content: space-between;
+}
+.content .bottom .weather{
+	font-size: 0.36rem;
+	color: #434343;
+	line-height: 0.86rem;
+}
+.content .bottom .pic{
+	width: 0.48rem;
+	height: 0.48rem;
+	/* background: red; */
+	margin-top: 0.2rem;
+    /* background: url(../img/0.png) no-repeat; */
+    /* 禁止重复 */
+    background-repeat: no-repeat;
+    background-size: 0.48rem 0.48rem;
+}
+/* .con2{
+	width: 100%;
+	height: 0.24rem;
+	border-bottom: 0.03rem solid #e4e4e4;
+} */
+.con2{
+	width: 100%;
+	height: 3.90rem;
+	background: #fff;
+	/* 可以不需要con2，给一个margin-top：0.3rem; */
+	border-top: 0.03rem solid #e4e4e4;
+	margin-top: 0.3rem;
+	border-bottom: 0.05rem solid #e4e4e4;
+	/* padding-top: 0.9rem;
+	padding-bottom: 0.8rem; */
+	/* 顺序为上 右 下 左 */
+	padding: 0.9rem 0rem 0.8rem 0rem;
+	box-sizing: border-box;
+	/* 超出部分以滚动条的方式显示 */
+	overflow-x: auto;
+}
+.con2::-webkit-scrollbar{
+	height: 0;
+}
+.con2 .wrap{
+	height: 100%;
+	/* 弹性布局 */
+	display: flex;
+
+}
+.con2 .wrap .now{
+	width: 2.12rem;
+	height: 100%;
+	background: #fff;
+	/* 禁止缩小 */
+    flex-shrink: 0;
+    display: flex;
+    /* 改变主轴方向 */
+    flex-direction: column;
+    /* 两边对齐 */
+    justify-content: space-between;
+}
+.con2 .wrap .now .now_time{
+	font-size: 0.24rem;
+	color: #999999;
+    text-align: center;
+}
+.con2 .wrap .now .now_icon{
+	width: 1rem;
+	height: 1rem;
+	/* div水平居中 */
+	margin: 0 auto;
+	/* background: url('../img/0.png') no-repeat; */
+	background-repeat: no-repeat;
+	background-size: 1rem 1rem;
+
+}
+.con2 .wrap .now .now_temperature{
+	font-size: 0.28rem;
+	color: #333333;
+	font-weight: normal;
+	text-align: center;
+}
+.con3{
+	width: 100%;
+	height: 11.49rem;
+	background: white;
+	border-top: 0.03rem solid #e4e4e4;
+	margin-top: 0.3rem;
+	border-bottom: 0.03rem solid #e4e4e4;
+	padding: 0.72rem 0rem 0.94rem 0rem;
+	box-sizing: border-box;
+	/* 超出部分以滚动条的方式显示 */
+	overflow-x: auto;
+}
+.con3::-webkit-scrollbar{
+	height: 0;
+}
+.con3 .wrap{
+	height: 100%;
+	/* 弹性布局 */
+	display: flex;
+}
+.con3 .wrap .recent{
+	width: 2.12rem;
+	height: 100%;
+	background: white;
+	flex-shrink: 0;
+    display: flex;
+    /* 改变主轴方向 */
+    flex-direction: column;
+    /* 两边对齐 */
+    justify-content: space-between;
+}
+.con3 .wrap .recent .recent_time{
+    font-size: 0.24rem;
+    color: #888888;
+    text-align: center;
+}
+.con3 .wrap .recent .recent_wea{
+	font-size: 0.36rem;
+	color: #888888;
+	text-align: center;
+}
+.con3 .wrap .recent .recent_pic{
+	width: 1rem;
+	height: 1rem;
+	/* background: blue; */
+	margin: 0 auto;
+	background: url('../img/4.png') no-repeat;
+	background-size: 1rem 1rem;
+}
+.con3 .wrap .recent .recent_high{
+	font-size: 0.28rem;
+	color: #333333;
+	text-align: center;
+}
+.con3 .wrap .recent .recent_low{
+	font-size: 0.28rem;
+	color: #333333;
+	text-align: center;
+}
+.con3 .wrap .recent .recent_wind{
+	font-size: 0.3rem;
+	color: #888888;
+	text-align: center;
+}
+.con3 .wrap .recent .recent_level{
+	font-size: 0.3rem;
+	color: #888888;
+	text-align: center;
+}
+.city_box{
+	width: 100%;
+	height: 35rem;
+	background:#fff;
+	position: absolute;
+    top: 0;
+    left: 0;
+}
+.city_box .sousuo_box{
+	width: 100%;
+	height: 1.26rem;
+	/* background: skyblue; */
+	border-bottom: 0.04rem solid #e4e4e4; 
+	padding: 0.18rem 0.49rem 0.18rem 0.35rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+}
+.city_box .sousuo_box .search_box{
+	width: 8.62rem;
+	height: 0.86rem;
+	background: #f2f2f2;
+	border-radius: 0.43rem;
+}
+.city_box .sousuo_box .button{
+	font-size: 0.36rem;
+	color: #434343;
+    line-height: 0.9rem;
+    font-family: "微软雅黑";
+}
+.icon{
+	font-size: 0.7rem;
+	float: left;
+	margin-top: 0.10rem;
+	margin-left: 0.15rem;
+}
+.text{
+	width: 7.2rem;
+    height: 100%;
+    background: #f2f2f2;
+    border: none;
+    float: left;
+    padding-left: 0.28rem;
+    box-sizing: border-box;
+}
+/* 获取焦点 */
+.text:focus{
+	outline: none;
+}
+.city{
+	width: 100%;
+	height: 20rem;
+	/* background: skyblue; */
+	padding-top: 0.24rem;
+	padding-left: 0.36rem;
+	padding-right: 0.35rem;
+	box-sizing: border-box;
+	overflow-y: auto;
+}
+.city .title{
+	width: 100%;
+	height: 1.16rem;
+	/* background: lightpink; */
+	font-size: 0.38rem;
+	color: #434343;
+    line-height: 1.16rem;
+    /* 字间距 */
+    letter-spacing: 0.03rem;
+}
+.city .con{
+    width: 100%;
+    height: auto;
+    /* 超出部分隐藏 */
+    overflow: hidden;
+}
+.city .con .son{
+	width: 3.17rem;
+	height: 0.81rem;
+	background: #f2f2f2;
+	border-radius: 0.34rem;
+	font-size: 0.32rem;
+	color: #434343;
+	text-align: center;
+	line-height: 0.81rem;
+    float: left;
+    margin: 0 0.28rem 0.21rem 0;
+}
+.city .con .son:nth-child(3n){
+	margin-right: 0;
+}
+/* 后代选择器
+伪类选择器
+:nth-child(n)选中第n个孩子
+:first-child 选中第1个孩子
+:last-child 选中第2个孩子 */
+/* margin 盒子与盒子之间的距离
+padding 不让用的地方 */
